@@ -1,0 +1,21 @@
+.headingLogin{
+    
+    text-align: center;
+    color:lightgreen;
+  }
+  .form_Login{
+    padding: 0.9em;
+    margin-top: 20px;
+  
+  }
+  .div_Login{
+  background-color:#08a4d5; 
+  }
+  .login_Validations{
+    color:brown; 
+  }
+  
+  html, body{
+    height: 100%;
+    background: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
+  }
