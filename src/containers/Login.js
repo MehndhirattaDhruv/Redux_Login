@@ -2,7 +2,7 @@ import React from 'react';
 import  { LoginForm } from '../components';
 import validateInput from '../Utilities/Validations/LoginFirst';
 import actions from '../actions';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 //@connect((state) => state)
 export default class Login extends React.Component {
   constructor(props) {

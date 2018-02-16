@@ -27,19 +27,36 @@ export default function(state = initState, action){//pure virtual functio
 			saveUser(newUser)
 			return {...state,fetching: false, user : newUser}
 
-// forgot password
-		case types.AUTH_FORGOT :
+// NEW RGISTRATION
+			case types.AUTH_NEWREGISTER :
+				return {fetching: true}
+
+			case types.AUTH_NEWREGISTER_SUCCESS :
+
+				newUser = {...action.payload.user};
+				saveUser(newUser)
+				return {...state,fetching: false, user : newUser}
+
+			case types.AUTH_NEWREGISTER_FAILED:
+				return {...state, fetching: false}
+
+			//fORGOT
+			
+			case types.AUTH_FORGOT :
 			return {fetching: true}
 
-		case types.AUTH_FORGOT_SUCCESS :
-
+			case types.AUTH_FORGOT_SUCCESS :
 			newUser = {...action.payload.user};
 			saveUser(newUser)
 			return {...state,fetching: false, user : newUser}
 
-		case types.AUTH_FORGOT_FAILED :
+			case types.AUTH_FORGOT_FAILED:
 			return {...state, fetching: false}
-		default :
+		
+		
+		
+		
+			default :
 			return {...state}
 	}
 
